@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap");
+
+$navfont: "Playball", cursive;
+$primFont: "Playfair Display", serif;
+
+$primTextCol: #1f6163;
+$secTextCol: #fffad5;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fffcf0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// nav/header start
+header {
+    height: auto;
+    width: 100%;
+    margin: auto;
+    height: 20vh;
+    .nav__container {
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 5%;
+
+        .honeys {
+            margin-left: -2em;
+            min-width: 150px;
+            max-width: 11%;
+            align-self: flex-start;
+        }
+
+        nav {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+
+            .nav__links {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                font-size: 1.3em;
+
+                li {
+                    font-family: $navfont;
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        transition: all 0.4s;
+
+                        &:hover,
+                        &:focus {
+                            text-decoration: underline;
+                            font-size: 1.3em;
+                            letter-spacing: 2px;
+                            outline: none;
+                            color: $primTextCol;
+                            transition: all 0.4s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//end
+
+//hero start
+.hero {
+    height: 80vh;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    .honeycomb {
+        width: 90%;
+        padding-top: 2em;
+    }
+
+    h1 {
+        font-family: $primFont;
+        font-size: 7em;
+        font-weight: 600;
+        line-height: 2em;
+        color: $primTextCol;
+    }
+}
+//end
+
+//opening hours
+.hours {
+    margin-top: 10em;
+    width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 50px;
+    padding: 3em;
+    background-color: $primTextCol;
+    box-shadow: 5px 5px 30px $primTextCol, inset 5px 0px 30px black;
+
+    .hours__img {
+        width: 100%;
+        border-radius: 50px;
+        box-shadow: 0px 0px 5px black;
+    }
+
+    .hours__open {
+        text-align: center;
+        align-self: center;
+        color: $secTextCol;
+        font-family: $primFont;
+        h2 {
+            text-decoration: underline;
+            font-weight: 400;
+            font-size: 2em;
+            padding-bottom: 0.8em;
+        }
+
+        li {
+            padding: 0.5em 0em;
+            font-weight: 400;
+            list-style-type: none;
+        }
+    }
+}
+//end
+
+//about
+.about {
+    width: 100%;
+    background-color: $primTextCol;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10em;
+
+    .about__text {
+        color: $secTextCol;
+        width: 80%;
+        padding: 50px;
+        font-family: $primFont;
+        font-size: 1.2em;
+        text-align: center;
+
+        p:nth-last-child(1) {
+            padding-top: 1rem;
+        }
+    }
+}
+//end
+
+//gallery section
+.gallery {
+    margin: 3em 0em;
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: center;
+
+    img {
+        max-width: 200px;
+        object-fit: cover;
+        padding: 5px;
+        border-radius: 5px;
+    }
+}
+
+//contact us page
+.contact {
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: $primFont;
+    margin-bottom: 2em;
+    height: 40vh;
+    h1 {
+        width: 80%;
+        font-size: 2em;
+        color: $primTextCol;
+    }
+}
+
+.contact__methods {
+    width: 100%;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+
+    .contact__methods-list {
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+        font-size: 2em;
+        color: $primTextCol;
+
+        a {
+            font-size: 3em;
+            color: $primTextCol;
+            transition: 1s ease;
+
+            &:hover,
+            &:focus {
+                color: #bd293e;
+                transition: 0.2s ease;
+            }
+        }
+    }
+}
+
+.menu-container {
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 1.4em;
+    display: flex;
+    align-items: stretch;
+    width: 80%;
+    margin-bottom: 1.5em;
+    border: 1px solid black;
+    padding: 1em 0em;
+
+    p {
+        font-weight: 600;
+    }
+
+    a {
+        color: $primTextCol;
+    }
+
+    span {
+        text-transform: lowercase;
+        font-weight: 500;
+        padding-left: 5px;
+    }
+
+    sup {
+        font-style: italic;
+    }
+
+    .menu-item-header {
+        font-family: $primFont;
+        font-weight: 700;
+        font-size: 1.2em;
+        text-decoration: underline;
+    }
+
+    .menu-left {
+        width: 50%;
+    }
+
+    .menu-right {
+        width: 50%;
+    }
+}
+
+//footer
+footer {
+    width: 100%;
+    background-color: #bd293e;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: center;
+    font-size: 0.8em;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+}
+
+// honeycomb img needs to go at around
+@media only screen and (max-width: 1468px) {
+    .hero {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        img {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 1334px) {
+    .gallery {
+        img {
+            width: 150px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1101px) {
+    .hero {
+        font-size: 0.8em;
+
+        h1 {
+            line-height: 2em;
+        }
+    }
+
+    .hours {
+        width: 90%;
+        margin-top: 0em;
+    }
+}
+
+@media only screen and (max-width: 815px) {
+    .hero {
+        font-size: 0.7em;
+    }
+
+    .hours {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 685px) {
+    .hero {
+        font-size: 0.5em;
+        align-items: flex-start;
+        h1 {
+            line-height: 4em;
+        }
+    }
+    .hours {
+        display: flex;
+        justify-content: center;
+        font-size: 1em;
+        width: auto;
+        padding: 5em;
+        img{
+            display: none;
+        }
+    }
+    .gallery {
+        margin-bottom: 0em;
+    }
+    .contact {
+        font-size: 0.7em;
+        margin-top: 0;
+    }
+}
+
+
